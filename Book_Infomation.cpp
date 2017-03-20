@@ -94,17 +94,43 @@ Book_Management::Book_Init()
  Book_Management::Book_Purchase()
  {
  	string Name, Publish, Author, Type, Intro;
-	int NBook; 
- 	cout<<"请输入买入图书的名称："; 
- 	cin>>Name;
- 	cout<<"请输入该图书的出版社名称：";
- 	cin>>Publish;
- 	cout<<"请输入该图书的类型";
-	cin>>Type;
-	cout<<"请输入该图书的购入数量" ;
-	cin>>NBook;
-	cout<<"请输入该图书的简介";
-	cin>>Intro; 
+ 	string ISBN;
+ 	string judge;
+ 	int NBook; 
+ 	cout<<"购入的图书是否有库存（YES/NO）";
+	cin>>judge;
+	if(judge == "YES")
+	{
+		int num;
+		cout<<"请输入图书的ISBN:"；
+		cin>>ISBN;
+		for(int i=0; i<All_Book.size(); i++)
+		{
+			if(All_Book[i].ISBN == ISBN)
+			{
+				cout<<"请输入购买图书数目:";
+				cin>>num;
+				All_Book[i].Book_Num += num;
+				break;
+			}
+		}
+	 } 
+	else
+	{
+		string id;
+		cout<<"请输入买入图书的名称："; 
+	 	cin>>Name;
+	 	cout<<"请输入该图书的出版社名称：";
+	 	cin>>Publish;
+	 	cout<<"请输入该图书的类型";
+		cin>>Type;
+		cout<<"请输入该图书的购入数量" ;
+		cin>>NBook;
+		cout<<"请输入该图书的简介";
+		cin>>Intro; 
+*******************************************************************
+	}
+ 	
   } 
  
  
