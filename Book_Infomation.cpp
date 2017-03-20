@@ -1,4 +1,6 @@
 /*图书信息管理模块 && 图书购入模块 */ 
+/*图书分类：教育，文艺，人文，童书，经管，励志，科技，生活...*/
+/*出版社：北京邮电大学出版社，清华大学出版社，机械工业出版社...*/
 #include<iostream>
 #include<string>
 #include<sstream>
@@ -8,6 +10,8 @@
 using namespace std;
 
 const int maxn = 20;
+map<string, int> BookType;//图书类型映射
+map<string, int> BookPublish;//图书出版商映射 
 
 typedef struct Book_Info
 {
@@ -16,9 +20,9 @@ typedef struct Book_Info
 	string Publish;//出版社名称 
 	string Auther;//作者名称 
 	string Type;//图书类型 
-	int State;//是否可借阅的状态 
+	int State;//是否可借阅的状态 ,1为可借阅 
 	int Appointment_Num;//图书预约数量 
-	string Last_Borrow;//上位借书者 
+	string Last_Borrow;//最近借书者 
 	string Intro;
  }Book_Info;
  
@@ -61,7 +65,7 @@ Book_Management::Book_Init()
 	cout<<"请输入该图书的购入数量" ;
 	cin>>NBook;
 	cout<<"请输入该图书的简介";
-	cin>>Intro:
+	cin>>Intro； 
   } 
  
  
