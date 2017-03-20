@@ -11,7 +11,7 @@ const int maxn = 20;
 
 typedef struct Book_Info
 {
-	string ID;//图书检索码 
+	string ID;//图书检索码  XX(图书类型）XXX(出版社)XXX(出版社书序号)XXX(图书流水号) 
 	string Name;//图书名称 
 	string Publish;//出版社名称 
 	string Auther;//作者名称 
@@ -19,6 +19,7 @@ typedef struct Book_Info
 	int State;//是否可借阅的状态 
 	int Appointment_Num;//图书预约数量 
 	string Last_Borrow;//上位借书者 
+	string Intro;
  }Book_Info;
  
 typedef struct Book
@@ -42,3 +43,28 @@ class Book_Management
 		void FindBookByAuthor(string Author);//按作者名称查找 
 };
 
+Book_Management::Book_Init()
+{
+	 
+ } 
+ 
+ Book_Management::Book_Purchase()
+ {
+ 	string Name, Publish, Auther, Type, Intro;
+	int NBook; 
+ 	cout<<"请输入买入图书的名称："; 
+ 	cin>>Name;
+ 	cout<<"请输入该图书的出版社名称：";
+ 	cin>>Publish;
+ 	cout<<"请输入该图书的类型";
+	cin>>Type;
+	cout<<"请输入该图书的购入数量" ;
+	cin>>NBook;
+	cout<<"请输入该图书的简介";
+	cin>>Intro:
+  } 
+ 
+ 
+ 
+ 
+ 
