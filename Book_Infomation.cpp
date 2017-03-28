@@ -36,6 +36,22 @@ map<string, int> BookType;//图书类型映射
 map<string, int> BookPublish;//图书出版商映射 
 vector<Book> All_Book;
 
+void Init_Map()
+{
+	string type[100] = {"教育"，"文艺"，"人文"，"童书"，"经管"，"励志"，"科技"，"生活"};
+	string publish[500] = {"北京邮电大学出版社"，"清华大学出版社"，"机械工业出版社"};
+	for(int i=0; type[i]!=NULL; i++)
+	{
+		if(i<10)
+		{
+			type[i] = "0" + itoa[i];
+		}
+		else
+		{
+			type[i] = itoa[i]; 
+	}
+ } 
+
 class Book_Management
 {
 	private:
@@ -89,6 +105,7 @@ Book_Management::Book_Init()
 		lastISBN = ISBN;
 		ss.clear();
 	}
+	printf("图书信息初始化完成\n"); 
  } 
  
  Book_Management::Book_Purchase()
@@ -97,6 +114,8 @@ Book_Management::Book_Init()
  	string ISBN;
  	string judge;
  	int NBook; 
+ 	Book book;
+ 	Book_Info book_info;
  	cout<<"购入的图书是否有库存（YES/NO）";
 	cin>>judge;
 	if(judge == "YES")
@@ -109,8 +128,8 @@ Book_Management::Book_Init()
 			if(All_Book[i].ISBN == ISBN)
 			{
 				cout<<"请输入购买图书数目:";
-				cin>>num;
-				All_Book[i].Book_Num += num;
+				cin>>NBook;
+				All_Book[i].Book_Num += NBook;
 				break;
 			}
 		}
@@ -119,19 +138,30 @@ Book_Management::Book_Init()
 	{
 		string id;
 		cout<<"请输入买入图书的名称："; 
-	 	cin>>Name;
+	 	cin>>book_info.Name;
 	 	cout<<"请输入该图书的出版社名称：";
-	 	cin>>Publish;
+	 	cin>>book_info.Publish;
 	 	cout<<"请输入该图书的类型";
-		cin>>Type;
+		cin>>book_info.Type;
 		cout<<"请输入该图书的购入数量" ;
-		cin>>NBook;
+		cin>>book_info.NBook;
 		cout<<"请输入该图书的简介";
-		cin>>Intro; 
-*******************************************************************
+		cin>>book_info.Intro; 
+		cout<<"请输入购买图书数目:";
+		cin>>book.Book_Num;
+/*********************************************************************/
+		ISBN = Code_Form(Type, Publish, Name);
+		book.ISBN = ISBN;
+		book.Info.push_back(book_info);
+		All_Book.push_back(book);
 	}
- 	
+ 	printf("购入图书信息录入成功\n");
   } 
+  
+Book_Management::Code_Form(string Type, string Publish, string Name)
+{
+	
+} 
  
  
  
