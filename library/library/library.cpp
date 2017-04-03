@@ -72,7 +72,6 @@ public:
 	void Book_Remove(Book Old_Book);//图书清理 
 	void FindBookById(string ID);//按ID查找图书 
 	void FindBookByName(string Name);//按图书名字查找图书 
-	void FindBookByType(string Type);//按图书类型查找 
 	void FindBookByAuthor(string Author);//按作者名称查找 
 };
 
@@ -263,6 +262,25 @@ string Book_Management::Code_Form(string Type, string Publish, string Name)//Nam
 	}
 	return ID;
 }
+
+void Book_Management::FindBookById(string ID)
+{
+	for (int i = 0; i < All_Book.size(); i++)
+	{
+		if 
+	}
+}
+
+void Book_Management::FindBookByAuthor(string Author)
+{
+
+}
+
+void Book_Management::FindBookByName(string Name)
+{
+
+}
+
 
 int _tmain(int argc, _TCHAR* argv[])
 {
