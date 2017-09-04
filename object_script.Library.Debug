@@ -1,0 +1,16 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\search_reserve.o
+./debug\add_new.o
+./debug\return_login.o
+./debug\info.o
+./debug\new_reader.o
+./debug\qrc_background.o
+./debug\moc_mainwindow.o
+./debug\moc_search_reserve.o
+./debug\moc_add_new.o
+./debug\moc_return_login.o
+./debug\moc_info.o
+./debug\moc_new_reader.o
+);

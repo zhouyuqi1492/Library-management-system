@@ -1,0 +1,16 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\search_reserve.o
+./release\add_new.o
+./release\return_login.o
+./release\info.o
+./release\new_reader.o
+./release\qrc_background.o
+./release\moc_mainwindow.o
+./release\moc_search_reserve.o
+./release\moc_add_new.o
+./release\moc_return_login.o
+./release\moc_info.o
+./release\moc_new_reader.o
+);

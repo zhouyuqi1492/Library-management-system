@@ -1,0 +1,5 @@
+[date]20170101
+[borrower]0121234512345
+[ID of the book]002
+[return or not]NO
+

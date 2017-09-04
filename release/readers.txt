@@ -1,0 +1,17 @@
+[name]reader1
+[status]student
+[college]college1
+[ID]1234512345
+[licenseid]0121234512345
+
+[name]reader2
+[status]student
+[college]college2
+[ID]1123452345
+[licenseid]]013123452345
+
+[name]reader1
+[status]teacher
+[college]college3
+[ID]1234534567
+[licenseid]1231234534567
